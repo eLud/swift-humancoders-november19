@@ -100,3 +100,10 @@ let count = capName?.count
 
 guard let trainerName = capName else { fatalError() } // if-let syntax (Optional binding)
 trainerName
+
+
+let testArray = ["A", "b"]
+let testSet: Set<String> = []
+
+testArray.contains("A")
+testSet.contains("A")
