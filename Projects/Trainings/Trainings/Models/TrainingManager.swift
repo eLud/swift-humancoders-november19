@@ -9,7 +9,11 @@
 /// This manages trainings
 class TrainingManager {
 
-    var trainings: [Training] = [] // Array<Training>
+    private var trainings: [Training] = [] // Array<Training>
+
+    var list: [Training] {
+        return trainings
+    }
 
     func add(_ training: Training) {
         trainings.append(training)

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3304786C2385A5D500A7A4EB /* BasicCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3304786A2385A5D500A7A4EB /* BasicCellTableViewCell.swift */; };
+		3304786D2385A5D500A7A4EB /* BasicCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3304786B2385A5D500A7A4EB /* BasicCellTableViewCell.xib */; };
 		330E6D742384103300AC3385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E6D732384103300AC3385 /* AppDelegate.swift */; };
 		330E6D762384103300AC3385 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E6D752384103300AC3385 /* SceneDelegate.swift */; };
 		330E6D782384103300AC3385 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E6D772384103300AC3385 /* ViewController.swift */; };
@@ -29,6 +31,7 @@
 		330E6DE423853B7700AC3385 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 330E6DE323853B7700AC3385 /* Preview Assets.xcassets */; };
 		330E6DE923853B7700AC3385 /* TrainingsWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 330E6DC523853B7500AC3385 /* TrainingsWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		330E6DF52385424200AC3385 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330E6DF42385424200AC3385 /* MapKit.framework */; };
+		330E6DF723859DEC00AC3385 /* TrainingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E6DF623859DEC00AC3385 /* TrainingListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3304786A2385A5D500A7A4EB /* BasicCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCellTableViewCell.swift; sourceTree = "<group>"; };
+		3304786B2385A5D500A7A4EB /* BasicCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicCellTableViewCell.xib; sourceTree = "<group>"; };
 		330E6D702384103300AC3385 /* Trainings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trainings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		330E6D732384103300AC3385 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		330E6D752384103300AC3385 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +116,7 @@
 		330E6DE623853B7700AC3385 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		330E6DF22385411500AC3385 /* Trainings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Trainings.entitlements; sourceTree = "<group>"; };
 		330E6DF42385424200AC3385 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		330E6DF623859DEC00AC3385 /* TrainingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +177,9 @@
 				330E6D772384103300AC3385 /* ViewController.swift */,
 				330E6D8D2384403C00AC3385 /* Models */,
 				330E6D792384103300AC3385 /* Main.storyboard */,
+				3304786A2385A5D500A7A4EB /* BasicCellTableViewCell.swift */,
+				3304786B2385A5D500A7A4EB /* BasicCellTableViewCell.xib */,
+				330E6DF623859DEC00AC3385 /* TrainingListViewController.swift */,
 				330E6D7C2384103700AC3385 /* Assets.xcassets */,
 				330E6D7E2384103700AC3385 /* LaunchScreen.storyboard */,
 				330E6D812384103700AC3385 /* Info.plist */,
@@ -364,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3304786D2385A5D500A7A4EB /* BasicCellTableViewCell.xib in Resources */,
 				330E6D802384103700AC3385 /* LaunchScreen.storyboard in Resources */,
 				330E6D7D2384103700AC3385 /* Assets.xcassets in Resources */,
 				330E6D7B2384103300AC3385 /* Main.storyboard in Resources */,
@@ -402,9 +412,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				330E6DF723859DEC00AC3385 /* TrainingListViewController.swift in Sources */,
 				330E6D782384103300AC3385 /* ViewController.swift in Sources */,
 				330E6D8823843F7D00AC3385 /* Training.swift in Sources */,
 				330E6D742384103300AC3385 /* AppDelegate.swift in Sources */,
+				3304786C2385A5D500A7A4EB /* BasicCellTableViewCell.swift in Sources */,
 				330E6D762384103300AC3385 /* SceneDelegate.swift in Sources */,
 				330E6D8A23843FC100AC3385 /* Trainer.swift in Sources */,
 				330E6D8C2384401900AC3385 /* TrainingManager.swift in Sources */,
