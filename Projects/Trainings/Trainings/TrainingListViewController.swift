@@ -12,12 +12,12 @@ class TrainingListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    let manager = TrainingManager(demoData: true)
+    var manager = TrainingManager(demoData: true)
 
     ///This reference will hold the diffable dataSource for the tableView
     /// It will use instances from the Style enum to define sections and trainings to provide data for rows
     ///Both types must be Hashable
-    var diffableDataSource: UITableViewDiffableDataSource<Training.Style, Training>!
+    var diffableDataSource: UITableViewDiffableDataSource<Training.Style, Training>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,25 +25,39 @@ class TrainingListViewController: UIViewController {
         tableView.register(UINib(nibName: "BasicCellTableViewCell", bundle: nil), forCellReuseIdentifier: "basicCell")
 
 //        tableView.dataSource = self
-        tableView.delegate = self
+//        tableView.delegate = self
 
         configureDiffableDatasource()
 
         let hugo = Trainer(firstName: "Hugo Lepetit")
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
             self.manager.add(Training(theme: "Ruby", duration: 3, isFull: false, trainer: hugo, style: .onSite))
             self.populateDiffableDataSource(animated: true)
 //            self.tableView.reloadData()
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4)) {
             self.manager.add(Training(theme: "Ruby on rails", duration: 3, isFull: false, trainer: hugo, style: .remote))
             self.populateDiffableDataSource(animated: true)
 //            self.tableView.reloadData()
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
             self.manager.add(Training(theme: "Tests avec Ruby on rails", duration: 3, isFull: false, trainer: hugo, style: .onSite))
+            self.populateDiffableDataSource(animated: true)
+//            self.tableView.reloadData()
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6)) {
+            let removed = self.manager.list[0]
+            self.manager.remove(removed)
+            self.manager.add(removed)
+            self.populateDiffableDataSource(animated: true)
+//            self.tableView.reloadData()
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(7)) {
+            self.manager.shuffle()
             self.populateDiffableDataSource(animated: true)
 //            self.tableView.reloadData()
         }
@@ -73,24 +87,36 @@ extension TrainingListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+
+        switch section {
+        case 0:
+            return manager.list.filter({$0.style == .onSite}).count
+        case 1:
+            return manager.list.filter({$0.style == .remote}).count
+        default:
+            return 0
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let identifier: String
+        let training: Training
 
         switch indexPath.section {
         case 0:
             identifier = "basicCell"
+            training = manager.list.filter({$0.style == .onSite})[indexPath.row]
         case 1:
             identifier = "helloCell"
+            training = manager.list.filter({$0.style == .remote})[indexPath.row]
         default:
             fatalError("Must provide an identifier")
         }
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-        cell.textLabel?.text = "\(indexPath)"
+         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        cell.textLabel?.text = training.theme
+        cell.detailTextLabel?.text = "\(training.duration) jours"
         return cell
     }
 }
@@ -116,7 +142,7 @@ extension TrainingListViewController {
         snapshot.appendSections([.onSite, .remote])
         snapshot.appendItems(manager.list.filter( {$0.style == .onSite} ), toSection: .onSite)
         snapshot.appendItems(manager.list.filter( {$0.style == .remote} ), toSection: .remote)
-        diffableDataSource.apply(snapshot, animatingDifferences: animated)
+        diffableDataSource?.apply(snapshot, animatingDifferences: animated)
     }
 
     func configureDiffableDatasource() {

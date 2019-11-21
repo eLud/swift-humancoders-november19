@@ -36,4 +36,11 @@ struct Training: Equatable {
 
 extension Training: Hashable {
 
+//    func hash(into hasher: inout Hasher) {
+//        hasher.combine(theme)
+//        hasher.combine(duration)
+//        hasher.combine(isFull)
+//        ...
+//    }
+
 }

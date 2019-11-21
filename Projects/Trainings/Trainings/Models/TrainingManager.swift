@@ -9,7 +9,7 @@
 /// This manages trainings
 class TrainingManager {
 
-    private var trainings: [Training] = [] // Array<Training>
+    var trainings: [Training] = [] // Array<Training>
 
     init(demoData: Bool = false) {
         if demoData {
@@ -27,6 +27,10 @@ class TrainingManager {
 
     func add(_ training: Training) {
         trainings.append(training)
+    }
+
+    func shuffle() {
+        trainings.shuffle()
     }
 
     /// Removes a training
