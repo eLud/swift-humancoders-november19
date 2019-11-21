@@ -6,8 +6,8 @@
 //  Copyright © 2019 Tectec. All rights reserved.
 //
 
-struct Trainer: Equatable {
-    fileprivate var firstName: String
+struct Trainer: Equatable, Hashable {
+    var firstName: String
 
     // Func with no parameter nor return
     func train() {

@@ -12,17 +12,28 @@ class TrainingListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    let manager = TrainingManager()
+    let manager = TrainingManager(demoData: true)
+
+    ///This reference will hold the diffable dataSource for the tableView
+    /// It will use instances from the Style enum to define sections and trainings to provide data for rows
+    ///Both types must be Hashable
+    var diffableDataSource: UITableViewDiffableDataSource<Training.Style, Training>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.register(UINib(nibName: "BasicCellTableViewCell", bundle: nil), forCellReuseIdentifier: "basicCell")
 
-        tableView.dataSource = self
+//        tableView.dataSource = self
         tableView.delegate = self
+
+        configureDiffableDatasource()
     }
-    
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        populateDiffableDataSource()
+    }
 
     /*
     // MARK: - Navigation
@@ -77,4 +88,37 @@ extension TrainingListViewController: UITableViewDelegate {
         }
     }
 
+}
+
+//Mark: - DiffableDataSource demo
+extension TrainingListViewController {
+    func populateDiffableDataSource() {
+        var snapshot = NSDiffableDataSourceSnapshot<Training.Style, Training>()
+        snapshot.appendSections([.onSite, .remote])
+        snapshot.appendItems(manager.list.filter( {$0.style == .onSite} ), toSection: .onSite)
+        snapshot.appendItems(manager.list.filter( {$0.style == .remote} ), toSection: .remote)
+        diffableDataSource.apply(snapshot, animatingDifferences: false)
+    }
+
+    func configureDiffableDatasource() {
+
+        //We don't forget to really initialise our diffable dataSource
+         diffableDataSource = UITableViewDiffableDataSource(tableView: tableView, cellProvider: { (tableView, indexPath, training) -> UITableViewCell? in
+
+             let identifier: String
+             switch indexPath.section {
+             case 0:
+                 identifier = "basicCell"
+             case 1:
+                 identifier = "helloCell"
+             default:
+                 fatalError("Must provide an identifier")
+             }
+
+             let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+            cell.textLabel?.text = training.theme
+            cell.detailTextLabel?.text = "\(training.duration) jours"
+             return cell
+         })
+    }
 }

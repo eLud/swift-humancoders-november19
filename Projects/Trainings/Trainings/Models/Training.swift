@@ -33,3 +33,7 @@ struct Training: Equatable {
     var trainer: Trainer? // Optional<Trainer>
     let style: Style
 }
+
+extension Training: Hashable {
+
+}

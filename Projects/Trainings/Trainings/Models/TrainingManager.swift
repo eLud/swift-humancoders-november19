@@ -11,6 +11,16 @@ class TrainingManager {
 
     private var trainings: [Training] = [] // Array<Training>
 
+    init(demoData: Bool = false) {
+        if demoData {
+            let me = Trainer(firstName: "Ludovic")
+            trainings.append(Training(theme: "iOS avec Swift", duration: 5, isFull: false, trainer: me, style: .onSite))
+            trainings.append(Training(theme: "SwiftUI pour développeur iOS", duration: 3, isFull: false, trainer: me, style: .onSite))
+            trainings.append(Training(theme: "Kotlin", duration: 3, isFull: false, trainer: nil, style: .onSite))
+            trainings.append(Training(theme: "Android", duration: 4, isFull: false, trainer: nil, style: .remote))
+        }
+    }
+
     var list: [Training] {
         return trainings
     }
