@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Training: Equatable {
+struct Training: Equatable, Identifiable {
 
     // Enums can have rawValue : String, Characters, Int / Double / Float
     enum Style: Int, CaseIterable, Identifiable {
@@ -36,4 +36,6 @@ struct Training: Equatable {
     var isFull: Bool
     var trainer: Trainer? // Optional<Trainer>
     let style: Style
+
+    let id: UUID = UUID()
 }
