@@ -68,15 +68,33 @@ class TrainingListViewController: UIViewController {
         populateDiffableDataSource()
     }
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//        if segue.identifier == "form" {
+//
+//        } else if segue.identifier == "details" {
+
+            guard let destination = segue.destination as? TrainingDetailsViewController else { fatalError("I want a TrainingDetailsViewController, please…") }
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+
+            let trainingToPass: Training
+
+            switch indexPath.section {
+            case 0:
+                let trainings = manager.list.filter({$0.style == .onSite})
+                trainingToPass = trainings[indexPath.row]
+            case 1:
+                let trainings = manager.list.filter({$0.style == .remote})
+                trainingToPass = trainings[indexPath.row]
+            default:
+                fatalError()
+            }
+            destination.training = trainingToPass
+//        }
     }
-    */
 
 }
 

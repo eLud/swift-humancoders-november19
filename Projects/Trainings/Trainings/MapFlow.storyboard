@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OAN-Bm-a0N">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="XbN-De-l0T">
+            <objects>
+                <viewController storyboardIdentifier="mainMapController" id="OAN-Bm-a0N" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YvE-BA-qGh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OVi-O3-YHC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OVi-O3-YHC" firstAttribute="leading" secondItem="Ccm-zA-V1h" secondAttribute="leading" id="9n5-61-Chw"/>
+                            <constraint firstItem="OVi-O3-YHC" firstAttribute="trailing" secondItem="Ccm-zA-V1h" secondAttribute="trailing" id="Jup-sW-SPn"/>
+                            <constraint firstItem="OVi-O3-YHC" firstAttribute="top" secondItem="YvE-BA-qGh" secondAttribute="top" id="f9q-02-P8O"/>
+                            <constraint firstAttribute="bottom" secondItem="OVi-O3-YHC" secondAttribute="bottom" id="wT5-1q-gP5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ccm-zA-V1h"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="cwM-BC-O62"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nZs-Dn-ngm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50.724637681159422" y="183.48214285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="map" catalog="system" width="64" height="56"/>
+    </resources>
+</document>

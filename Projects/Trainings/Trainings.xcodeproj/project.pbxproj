@@ -32,6 +32,8 @@
 		330E6DE923853B7700AC3385 /* TrainingsWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 330E6DC523853B7500AC3385 /* TrainingsWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		330E6DF52385424200AC3385 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330E6DF42385424200AC3385 /* MapKit.framework */; };
 		330E6DF723859DEC00AC3385 /* TrainingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E6DF623859DEC00AC3385 /* TrainingListViewController.swift */; };
+		33975BAE2386DBD4008740CA /* MapFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33975BAD2386DBD4008740CA /* MapFlow.storyboard */; };
+		33975BB02386E5A6008740CA /* TrainingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33975BAF2386E5A6008740CA /* TrainingDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,8 @@
 		330E6DF22385411500AC3385 /* Trainings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Trainings.entitlements; sourceTree = "<group>"; };
 		330E6DF42385424200AC3385 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		330E6DF623859DEC00AC3385 /* TrainingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingListViewController.swift; sourceTree = "<group>"; };
+		33975BAD2386DBD4008740CA /* MapFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapFlow.storyboard; sourceTree = "<group>"; };
+		33975BAF2386E5A6008740CA /* TrainingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,9 +181,11 @@
 				330E6D772384103300AC3385 /* ViewController.swift */,
 				330E6D8D2384403C00AC3385 /* Models */,
 				330E6D792384103300AC3385 /* Main.storyboard */,
+				33975BAD2386DBD4008740CA /* MapFlow.storyboard */,
 				3304786A2385A5D500A7A4EB /* BasicCellTableViewCell.swift */,
 				3304786B2385A5D500A7A4EB /* BasicCellTableViewCell.xib */,
 				330E6DF623859DEC00AC3385 /* TrainingListViewController.swift */,
+				33975BAF2386E5A6008740CA /* TrainingDetailsViewController.swift */,
 				330E6D7C2384103700AC3385 /* Assets.xcassets */,
 				330E6D7E2384103700AC3385 /* LaunchScreen.storyboard */,
 				330E6D812384103700AC3385 /* Info.plist */,
@@ -373,6 +379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33975BAE2386DBD4008740CA /* MapFlow.storyboard in Resources */,
 				3304786D2385A5D500A7A4EB /* BasicCellTableViewCell.xib in Resources */,
 				330E6D802384103700AC3385 /* LaunchScreen.storyboard in Resources */,
 				330E6D7D2384103700AC3385 /* Assets.xcassets in Resources */,
@@ -417,6 +424,7 @@
 				330E6D8823843F7D00AC3385 /* Training.swift in Sources */,
 				330E6D742384103300AC3385 /* AppDelegate.swift in Sources */,
 				3304786C2385A5D500A7A4EB /* BasicCellTableViewCell.swift in Sources */,
+				33975BB02386E5A6008740CA /* TrainingDetailsViewController.swift in Sources */,
 				330E6D762384103300AC3385 /* SceneDelegate.swift in Sources */,
 				330E6D8A23843FC100AC3385 /* Trainer.swift in Sources */,
 				330E6D8C2384401900AC3385 /* TrainingManager.swift in Sources */,
