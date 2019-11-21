@@ -28,6 +28,25 @@ class TrainingListViewController: UIViewController {
         tableView.delegate = self
 
         configureDiffableDatasource()
+
+        let hugo = Trainer(firstName: "Hugo Lepetit")
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+            self.manager.add(Training(theme: "Ruby", duration: 3, isFull: false, trainer: hugo, style: .onSite))
+            self.populateDiffableDataSource(animated: true)
+//            self.tableView.reloadData()
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+            self.manager.add(Training(theme: "Ruby on rails", duration: 3, isFull: false, trainer: hugo, style: .remote))
+            self.populateDiffableDataSource(animated: true)
+//            self.tableView.reloadData()
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
+            self.manager.add(Training(theme: "Tests avec Ruby on rails", duration: 3, isFull: false, trainer: hugo, style: .onSite))
+            self.populateDiffableDataSource(animated: true)
+//            self.tableView.reloadData()
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -92,12 +111,12 @@ extension TrainingListViewController: UITableViewDelegate {
 
 //Mark: - DiffableDataSource demo
 extension TrainingListViewController {
-    func populateDiffableDataSource() {
+    func populateDiffableDataSource(animated: Bool = false) {
         var snapshot = NSDiffableDataSourceSnapshot<Training.Style, Training>()
         snapshot.appendSections([.onSite, .remote])
         snapshot.appendItems(manager.list.filter( {$0.style == .onSite} ), toSection: .onSite)
         snapshot.appendItems(manager.list.filter( {$0.style == .remote} ), toSection: .remote)
-        diffableDataSource.apply(snapshot, animatingDifferences: false)
+        diffableDataSource.apply(snapshot, animatingDifferences: animated)
     }
 
     func configureDiffableDatasource() {
