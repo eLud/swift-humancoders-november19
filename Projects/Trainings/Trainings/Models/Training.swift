@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct Training: Equatable {
+struct Training: Equatable, Codable {
 
     // Enums can have rawValue : String, Characters, Int / Double / Float
-    enum Style: Int, CaseIterable {
+    enum Style: Int, CaseIterable, Codable {
         // We can refine the rawValue by making it explicit
         case onSite = 0
         case remote = 1

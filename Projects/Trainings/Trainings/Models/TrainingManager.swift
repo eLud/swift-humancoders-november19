@@ -9,7 +9,7 @@
 import Foundation
 
 /// This manages trainings
-class TrainingManager {
+class TrainingManager: Codable {
 
     var trainings: [Training] = [] // Array<Training>
 
@@ -30,6 +30,8 @@ class TrainingManager {
     func add(_ training: Training) {
         trainings.append(training)
         NotificationCenter.default.post(name: Notification.Name("modelUpdated"), object: self, userInfo: ["added":training])
+
+        try? save()
     }
 
     func shuffle() {
@@ -44,4 +46,50 @@ class TrainingManager {
         trainings.remove(at: index)
         NotificationCenter.default.post(name: Notification.Name("modelUpdated"), object: self)
     }
+
+    func save() throws {
+
+        let jsonEncoder = JSONEncoder()
+        jsonEncoder.keyEncodingStrategy = .convertToSnakeCase
+
+        let plistEncoder = PropertyListEncoder()
+//        plistEncoder.outputFormat = .xml
+
+        // Traiter l'erreur comme un optional
+        if let jsonData = try? jsonEncoder.encode(self) {
+            print("json : ", String(data: jsonData, encoding: .utf8)!)
+
+            let fm = FileManager.default
+            let urls = fm.urls(for: .documentDirectory, in: .userDomainMask)
+            if let url = urls.first {
+                let finalURL = url.appendingPathComponent("manager.json")
+                do {
+                    print(finalURL)
+                    try jsonData.write(to: finalURL)
+                } catch {
+                    print(error)
+                }
+            }
+        }
+
+        // Remonter l'erreur (patate chaude) implique que la mathode throws
+        let plistData = try plistEncoder.encode(self)
+        print("plist : ", plistData)
+
+        // Traiter l'erreur
+//        do {
+//            let plistData = try plistEncoder.encode(self)
+//        } catch {
+//            print(error)
+//        }
+
+    }
+
+    func restore(data: Data) {
+        let decoder = JSONDecoder()
+        if let manager = try? decoder.decode(TrainingManager.self, from: data) {
+            print(manager)
+        }
+    }
+
 }

@@ -43,7 +43,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="sbw-fq-kbr" kind="show" identifier="details" id="xWx-YX-41G"/>
+                                            <segue destination="sbw-fq-kbr" kind="showDetail" identifier="details" id="xWx-YX-41G"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -330,14 +330,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Yii-ji-iQ8" kind="relationship" relationship="viewControllers" id="kUt-7X-Zcj"/>
+                        <segue destination="xbY-wy-lML" kind="relationship" relationship="viewControllers" id="cMB-cs-ONz"/>
                         <segue destination="jZU-3R-irH" kind="relationship" relationship="viewControllers" id="clh-nS-0Nh"/>
                         <segue destination="kuJ-rg-p3y" kind="relationship" relationship="viewControllers" id="l0s-zR-ekI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="57X-bp-FAs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-694.20289855072474" y="138.61607142857142"/>
+            <point key="canvasLocation" x="-1717" y="145"/>
         </scene>
         <!--MapFlow-->
         <scene sceneID="5nS-ec-cfd">
@@ -348,6 +348,19 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o57-Fe-vB8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-694" y="553"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="9Cc-dD-pL3">
+            <objects>
+                <splitViewController id="xbY-wy-lML" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="KPh-PH-qgS"/>
+                    <connections>
+                        <segue destination="Yii-ji-iQ8" kind="relationship" relationship="masterViewController" id="e7c-YM-sTI"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U6m-7u-QzT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-507" y="139"/>
         </scene>
         <!--Item-->
         <scene sceneID="cLZ-wl-Ruh">

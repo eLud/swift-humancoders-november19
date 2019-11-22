@@ -6,7 +6,7 @@
 //  Copyright © 2019 Tectec. All rights reserved.
 //
 
-struct Trainer: Equatable, Hashable {
+struct Trainer: Equatable, Hashable, Codable {
     var firstName: String
 
     // Func with no parameter nor return
