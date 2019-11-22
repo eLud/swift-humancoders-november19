@@ -6,6 +6,8 @@
 //  Copyright © 2019 Tectec. All rights reserved.
 //
 
+import Foundation
+
 /// This manages trainings
 class TrainingManager {
 
@@ -27,10 +29,12 @@ class TrainingManager {
 
     func add(_ training: Training) {
         trainings.append(training)
+        NotificationCenter.default.post(name: Notification.Name("modelUpdated"), object: self, userInfo: ["added":training])
     }
 
     func shuffle() {
         trainings.shuffle()
+        NotificationCenter.default.post(name: Notification.Name("modelUpdated"), object: self)
     }
 
     /// Removes a training
@@ -38,5 +42,6 @@ class TrainingManager {
     func remove(_ training: Training) {
         guard let index = trainings.firstIndex(of: training) else { return }
         trainings.remove(at: index)
+        NotificationCenter.default.post(name: Notification.Name("modelUpdated"), object: self)
     }
 }

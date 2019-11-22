@@ -10,11 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var isFullSwitch: UISwitch!
     @IBOutlet weak var themeTextField: UITextField!
     @IBOutlet weak var durationStepper: UIStepper!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var trainerNameTextField: UITextField!
     @IBOutlet weak var styleSegmentedControl: UISegmentedControl!
+
+    var manager: TrainingManager?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func save(_ sender: UIButton) {
+
+        guard let theme = themeTextField.text, !theme.isEmpty else { return }
+        guard let trainerName = trainerNameTextField.text else { return }
+        guard let style = Training.Style(rawValue: styleSegmentedControl.selectedSegmentIndex) else { return }
+
+        let newTraining = Training(theme: theme, duration: Int(durationStepper.value), isFull: isFullSwitch.isOn, trainer: Trainer(firstName: trainerName), style: style)
+
+        manager?.add(newTraining)
+        dismiss(animated: true, completion: nil)
     }
 
     private func configureSegmentedControl() {

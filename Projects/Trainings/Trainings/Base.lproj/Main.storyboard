@@ -274,6 +274,7 @@
                     <connections>
                         <outlet property="durationLabel" destination="4au-XA-viF" id="CZf-Pn-i9W"/>
                         <outlet property="durationStepper" destination="js2-Lh-Mwc" id="w8V-sq-hdU"/>
+                        <outlet property="isFullSwitch" destination="iZW-WY-T6a" id="8hO-zg-Gc0"/>
                         <outlet property="styleSegmentedControl" destination="JMV-h6-mdw" id="LyJ-pg-gEI"/>
                         <outlet property="themeTextField" destination="OJ4-mc-R2B" id="5GP-vz-RoK"/>
                         <outlet property="trainerNameTextField" destination="cqF-1e-YOK" id="xrb-RO-VTl"/>

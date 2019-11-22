@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Combine
 
 class TrainingListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
     var manager = TrainingManager(demoData: true)
+    var notifcationCancellable: AnyCancellable?
 
     ///This reference will hold the diffable dataSource for the tableView
     /// It will use instances from the Style enum to define sections and trainings to provide data for rows
@@ -29,38 +31,38 @@ class TrainingListViewController: UIViewController {
 
         configureDiffableDatasource()
 
+//        NotificationCenter.default.addObserver(forName: Notification.Name("modelUpdated"), object: nil, queue: OperationQueue.main) { (notif) in
+//            self.populateDiffableDataSource(animated: true)
+//        }
+
         let hugo = Trainer(firstName: "Hugo Lepetit")
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
             self.manager.add(Training(theme: "Ruby", duration: 3, isFull: false, trainer: hugo, style: .onSite))
-            self.populateDiffableDataSource(animated: true)
-//            self.tableView.reloadData()
         }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4)) {
             self.manager.add(Training(theme: "Ruby on rails", duration: 3, isFull: false, trainer: hugo, style: .remote))
-            self.populateDiffableDataSource(animated: true)
-//            self.tableView.reloadData()
         }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
             self.manager.add(Training(theme: "Tests avec Ruby on rails", duration: 3, isFull: false, trainer: hugo, style: .onSite))
-            self.populateDiffableDataSource(animated: true)
-//            self.tableView.reloadData()
         }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6)) {
             let removed = self.manager.list[0]
             self.manager.remove(removed)
             self.manager.add(removed)
-            self.populateDiffableDataSource(animated: true)
-//            self.tableView.reloadData()
         }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(7)) {
             self.manager.shuffle()
-            self.populateDiffableDataSource(animated: true)
-//            self.tableView.reloadData()
         }
+
+        notifcationCancellable = NotificationCenter.default.publisher(for: Notification.Name("modelUpdated"))
+            .sink { (notif) in
+            self.populateDiffableDataSource(animated: true)
+        }
+
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -73,12 +75,15 @@ class TrainingListViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "form" {
-//
-//        } else if segue.identifier == "details" {
+        if segue.identifier == "form" {
 
-            guard let destination = segue.destination as? TrainingDetailsViewController else { fatalError("I want a TrainingDetailsViewController, please…") }
-        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            guard let destination = segue.destination as? ViewController else { fatalError("I want a ViewController") }
+            destination.manager = self.manager
+
+        } else if segue.identifier == "details" {
+
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            guard let destination = segue.destination as? TrainingDetailsViewController else { fatalError("I want a TrainingDetailsViewController") }
 
             let trainingToPass: Training
 
@@ -93,7 +98,7 @@ class TrainingListViewController: UIViewController {
                 fatalError()
             }
             destination.training = trainingToPass
-//        }
+        }
     }
 
 }
