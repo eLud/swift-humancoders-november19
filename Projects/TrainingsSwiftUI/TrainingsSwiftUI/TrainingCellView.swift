@@ -31,6 +31,6 @@ struct TrainingCellView: View {
 
 struct TrainingCellView_Previews: PreviewProvider {
     static var previews: some View {
-        TrainingCellView(training: Training(theme: "Demo", duration: 5, isFull: true, trainer: nil, style: .onSite))
+        TrainingCellView(training: Training.demoTraining)
     }
 }

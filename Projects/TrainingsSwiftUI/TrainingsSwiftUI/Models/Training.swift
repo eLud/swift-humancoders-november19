@@ -39,3 +39,9 @@ struct Training: Equatable, Identifiable {
 
     let id: UUID = UUID()
 }
+
+extension Training {
+    static var demoTraining: Training {
+        return Training(theme: "Demo", duration: 5, isFull: true, trainer: nil, style: .onSite)
+    }
+}

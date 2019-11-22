@@ -17,6 +17,7 @@ struct ContentView: View {
     @State private var style: Training.Style = .onSite
 
     @EnvironmentObject var manager: TrainingManager
+    @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
         NavigationView {
@@ -40,6 +41,7 @@ struct ContentView: View {
                 Section {
                     Button(action: {
                         self.saveContent()
+                        self.presentationMode.wrappedValue.dismiss()
                     }) {
                         Text("Save")
                     }

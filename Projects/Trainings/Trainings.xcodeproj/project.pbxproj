@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,7 +29,7 @@
 		330E6DDF23853B7600AC3385 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E6DDE23853B7600AC3385 /* NotificationView.swift */; };
 		330E6DE123853B7700AC3385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 330E6DE023853B7700AC3385 /* Assets.xcassets */; };
 		330E6DE423853B7700AC3385 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 330E6DE323853B7700AC3385 /* Preview Assets.xcassets */; };
-		330E6DE923853B7700AC3385 /* TrainingsWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 330E6DC523853B7500AC3385 /* TrainingsWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		330E6DE923853B7700AC3385 /* TrainingsWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 330E6DC523853B7500AC3385 /* TrainingsWatch.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		330E6DF52385424200AC3385 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330E6DF42385424200AC3385 /* MapKit.framework */; };
 		330E6DF723859DEC00AC3385 /* TrainingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E6DF623859DEC00AC3385 /* TrainingListViewController.swift */; };
 		33975BAE2386DBD4008740CA /* MapFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33975BAD2386DBD4008740CA /* MapFlow.storyboard */; };
@@ -466,6 +466,7 @@
 		};
 		330E6DE823853B7700AC3385 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 330E6DC423853B7500AC3385 /* TrainingsWatch */;
 			targetProxy = 330E6DE723853B7700AC3385 /* PBXContainerItemProxy */;
 		};
@@ -621,6 +622,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Trainings/Info.plist;
@@ -633,6 +635,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.tectec.Trainings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -646,6 +649,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Trainings/Info.plist;
@@ -658,6 +662,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.tectec.Trainings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

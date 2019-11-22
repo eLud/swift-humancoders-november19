@@ -16,6 +16,17 @@
 		330E6DB223844C5800AC3385 /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E6DAF23844C5800AC3385 /* Trainer.swift */; };
 		330E6DB323844C5800AC3385 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E6DB023844C5800AC3385 /* Training.swift */; };
 		330E6DB423844C5800AC3385 /* TrainingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E6DB123844C5800AC3385 /* TrainingManager.swift */; };
+		337577992387D71B005E44FE /* TrainingDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337577982387D71B005E44FE /* TrainingDetailsView.swift */; };
+		3375779B2387DF78005E44FE /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3375779A2387DF78005E44FE /* TabBarView.swift */; };
+		337577A42387E65B005E44FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337577A32387E65B005E44FE /* AppDelegate.swift */; };
+		337577A62387E65B005E44FE /* ContentViewMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337577A52387E65B005E44FE /* ContentViewMac.swift */; };
+		337577A82387E65B005E44FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 337577A72387E65B005E44FE /* Assets.xcassets */; };
+		337577AB2387E65B005E44FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 337577AA2387E65B005E44FE /* Preview Assets.xcassets */; };
+		337577AE2387E65C005E44FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337577AC2387E65B005E44FE /* Main.storyboard */; };
+		337577B42387E678005E44FE /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E6DAF23844C5800AC3385 /* Trainer.swift */; };
+		337577B52387E678005E44FE /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E6DB023844C5800AC3385 /* Training.swift */; };
+		337577B62387E678005E44FE /* TrainingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E6DB123844C5800AC3385 /* TrainingManager.swift */; };
+		337577BC2387EB4D005E44FE /* TrainingDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337577982387D71B005E44FE /* TrainingDetailsView.swift */; };
 		33975BAA2386A0E9008740CA /* TrainingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33975BA92386A0E9008740CA /* TrainingListView.swift */; };
 		33975BAC2386AA70008740CA /* TrainingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33975BAB2386AA70008740CA /* TrainingCellView.swift */; };
 /* End PBXBuildFile section */
@@ -32,12 +43,30 @@
 		330E6DAF23844C5800AC3385 /* Trainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trainer.swift; sourceTree = "<group>"; };
 		330E6DB023844C5800AC3385 /* Training.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 		330E6DB123844C5800AC3385 /* TrainingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingManager.swift; sourceTree = "<group>"; };
+		337577982387D71B005E44FE /* TrainingDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailsView.swift; sourceTree = "<group>"; };
+		3375779A2387DF78005E44FE /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		3375779C2387E509005E44FE /* TrainingsSwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrainingsSwiftUI.entitlements; sourceTree = "<group>"; };
+		337577A12387E65B005E44FE /* TrainingsMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingsMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		337577A32387E65B005E44FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		337577A52387E65B005E44FE /* ContentViewMac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewMac.swift; sourceTree = "<group>"; };
+		337577A72387E65B005E44FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		337577AA2387E65B005E44FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		337577AD2387E65C005E44FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		337577AF2387E65C005E44FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		337577B02387E65C005E44FE /* TrainingsMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrainingsMac.entitlements; sourceTree = "<group>"; };
 		33975BA92386A0E9008740CA /* TrainingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingListView.swift; sourceTree = "<group>"; };
 		33975BAB2386AA70008740CA /* TrainingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		330E6D9423844B8D00AC3385 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3375779E2387E65B005E44FE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -51,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				330E6D9923844B8D00AC3385 /* TrainingsSwiftUI */,
+				337577A22387E65B005E44FE /* TrainingsMac */,
 				330E6D9823844B8D00AC3385 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				330E6D9723844B8D00AC3385 /* TrainingsSwiftUI.app */,
+				337577A12387E65B005E44FE /* TrainingsMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,11 +97,14 @@
 		330E6D9923844B8D00AC3385 /* TrainingsSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				3375779C2387E509005E44FE /* TrainingsSwiftUI.entitlements */,
 				330E6DAE23844C5800AC3385 /* Models */,
 				330E6D9A23844B8D00AC3385 /* AppDelegate.swift */,
 				330E6D9C23844B8D00AC3385 /* SceneDelegate.swift */,
 				330E6D9E23844B8D00AC3385 /* ContentView.swift */,
 				33975BA92386A0E9008740CA /* TrainingListView.swift */,
+				3375779A2387DF78005E44FE /* TabBarView.swift */,
+				337577982387D71B005E44FE /* TrainingDetailsView.swift */,
 				33975BAB2386AA70008740CA /* TrainingCellView.swift */,
 				330E6DA023844B8F00AC3385 /* Assets.xcassets */,
 				330E6DA523844B8F00AC3385 /* LaunchScreen.storyboard */,
@@ -98,6 +132,28 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		337577A22387E65B005E44FE /* TrainingsMac */ = {
+			isa = PBXGroup;
+			children = (
+				337577A32387E65B005E44FE /* AppDelegate.swift */,
+				337577A52387E65B005E44FE /* ContentViewMac.swift */,
+				337577A72387E65B005E44FE /* Assets.xcassets */,
+				337577AC2387E65B005E44FE /* Main.storyboard */,
+				337577AF2387E65C005E44FE /* Info.plist */,
+				337577B02387E65C005E44FE /* TrainingsMac.entitlements */,
+				337577A92387E65B005E44FE /* Preview Content */,
+			);
+			path = TrainingsMac;
+			sourceTree = "<group>";
+		};
+		337577A92387E65B005E44FE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				337577AA2387E65B005E44FE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,6 +174,23 @@
 			productReference = 330E6D9723844B8D00AC3385 /* TrainingsSwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
+		337577A02387E65B005E44FE /* TrainingsMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 337577B12387E65C005E44FE /* Build configuration list for PBXNativeTarget "TrainingsMac" */;
+			buildPhases = (
+				3375779D2387E65B005E44FE /* Sources */,
+				3375779E2387E65B005E44FE /* Frameworks */,
+				3375779F2387E65B005E44FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrainingsMac;
+			productName = TrainingsMac;
+			productReference = 337577A12387E65B005E44FE /* TrainingsMac.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -129,6 +202,9 @@
 				ORGANIZATIONNAME = Tectec;
 				TargetAttributes = {
 					330E6D9623844B8D00AC3385 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					337577A02387E65B005E44FE = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
 				};
@@ -147,6 +223,7 @@
 			projectRoot = "";
 			targets = (
 				330E6D9623844B8D00AC3385 /* TrainingsSwiftUI */,
+				337577A02387E65B005E44FE /* TrainingsMac */,
 			);
 		};
 /* End PBXProject section */
@@ -159,6 +236,16 @@
 				330E6DA723844B8F00AC3385 /* LaunchScreen.storyboard in Resources */,
 				330E6DA423844B8F00AC3385 /* Preview Assets.xcassets in Resources */,
 				330E6DA123844B8F00AC3385 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3375779F2387E65B005E44FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				337577AE2387E65C005E44FE /* Main.storyboard in Resources */,
+				337577AB2387E65B005E44FE /* Preview Assets.xcassets in Resources */,
+				337577A82387E65B005E44FE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +263,22 @@
 				330E6D9D23844B8D00AC3385 /* SceneDelegate.swift in Sources */,
 				330E6D9F23844B8D00AC3385 /* ContentView.swift in Sources */,
 				330E6DB323844C5800AC3385 /* Training.swift in Sources */,
+				337577992387D71B005E44FE /* TrainingDetailsView.swift in Sources */,
+				3375779B2387DF78005E44FE /* TabBarView.swift in Sources */,
 				330E6DB423844C5800AC3385 /* TrainingManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3375779D2387E65B005E44FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				337577B42387E678005E44FE /* Trainer.swift in Sources */,
+				337577BC2387EB4D005E44FE /* TrainingDetailsView.swift in Sources */,
+				337577B62387E678005E44FE /* TrainingManager.swift in Sources */,
+				337577B52387E678005E44FE /* Training.swift in Sources */,
+				337577A62387E65B005E44FE /* ContentViewMac.swift in Sources */,
+				337577A42387E65B005E44FE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +291,14 @@
 				330E6DA623844B8F00AC3385 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		337577AC2387E65B005E44FE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				337577AD2387E65C005E44FE /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -312,7 +422,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TrainingsSwiftUI/TrainingsSwiftUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"TrainingsSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
 				ENABLE_PREVIEWS = YES;
@@ -323,6 +435,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.tectec.TrainingsSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -332,7 +445,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TrainingsSwiftUI/TrainingsSwiftUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"TrainingsSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
 				ENABLE_PREVIEWS = YES;
@@ -343,8 +458,57 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.tectec.TrainingsSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		337577B22387E65C005E44FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TrainingsMac/TrainingsMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"TrainingsMac/Preview Content\"";
+				DEVELOPMENT_TEAM = A7SGM6JEMA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TrainingsMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.tectec.TrainingsMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		337577B32387E65C005E44FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TrainingsMac/TrainingsMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"TrainingsMac/Preview Content\"";
+				DEVELOPMENT_TEAM = A7SGM6JEMA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TrainingsMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.tectec.TrainingsMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -365,6 +529,15 @@
 			buildConfigurations = (
 				330E6DAC23844B8F00AC3385 /* Debug */,
 				330E6DAD23844B8F00AC3385 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		337577B12387E65C005E44FE /* Build configuration list for PBXNativeTarget "TrainingsMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				337577B22387E65C005E44FE /* Debug */,
+				337577B32387E65C005E44FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
