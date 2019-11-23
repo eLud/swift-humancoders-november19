@@ -32,6 +32,8 @@
 		330E6DE923853B7700AC3385 /* TrainingsWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 330E6DC523853B7500AC3385 /* TrainingsWatch.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		330E6DF52385424200AC3385 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330E6DF42385424200AC3385 /* MapKit.framework */; };
 		330E6DF723859DEC00AC3385 /* TrainingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E6DF623859DEC00AC3385 /* TrainingListViewController.swift */; };
+		337577FF2388322C005E44FE /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337577FE2388322C005E44FE /* RedViewController.swift */; };
+		33757802238840BA005E44FE /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 33757801238840BA005E44FE /* SwiftyJSON */; };
 		33975BAE2386DBD4008740CA /* MapFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33975BAD2386DBD4008740CA /* MapFlow.storyboard */; };
 		33975BB02386E5A6008740CA /* TrainingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33975BAF2386E5A6008740CA /* TrainingDetailsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -119,6 +121,7 @@
 		330E6DF22385411500AC3385 /* Trainings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Trainings.entitlements; sourceTree = "<group>"; };
 		330E6DF42385424200AC3385 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		330E6DF623859DEC00AC3385 /* TrainingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingListViewController.swift; sourceTree = "<group>"; };
+		337577FE2388322C005E44FE /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
 		33975BAD2386DBD4008740CA /* MapFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapFlow.storyboard; sourceTree = "<group>"; };
 		33975BAF2386E5A6008740CA /* TrainingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33757802238840BA005E44FE /* SwiftyJSON in Frameworks */,
 				330E6DF52385424200AC3385 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +185,7 @@
 				330E6D772384103300AC3385 /* ViewController.swift */,
 				330E6D8D2384403C00AC3385 /* Models */,
 				330E6D792384103300AC3385 /* Main.storyboard */,
+				337577FE2388322C005E44FE /* RedViewController.swift */,
 				33975BAD2386DBD4008740CA /* MapFlow.storyboard */,
 				3304786A2385A5D500A7A4EB /* BasicCellTableViewCell.swift */,
 				3304786B2385A5D500A7A4EB /* BasicCellTableViewCell.xib */,
@@ -272,6 +277,9 @@
 				330E6DE823853B7700AC3385 /* PBXTargetDependency */,
 			);
 			name = Trainings;
+			packageProductDependencies = (
+				33757801238840BA005E44FE /* SwiftyJSON */,
+			);
 			productName = Trainings;
 			productReference = 330E6D702384103300AC3385 /* Trainings.app */;
 			productType = "com.apple.product-type.application";
@@ -362,6 +370,9 @@
 				Base,
 			);
 			mainGroup = 330E6D672384103300AC3385;
+			packageReferences = (
+				33757800238840BA005E44FE /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 330E6D712384103300AC3385 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -419,6 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				337577FF2388322C005E44FE /* RedViewController.swift in Sources */,
 				330E6DF723859DEC00AC3385 /* TrainingListViewController.swift in Sources */,
 				330E6D782384103300AC3385 /* ViewController.swift in Sources */,
 				330E6D8823843F7D00AC3385 /* Training.swift in Sources */,
@@ -843,6 +855,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		33757800238840BA005E44FE /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		33757801238840BA005E44FE /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33757800238840BA005E44FE /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 330E6D682384103300AC3385 /* Project object */;
 }

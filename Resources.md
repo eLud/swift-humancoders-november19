@@ -10,3 +10,6 @@
 [iOS 13 Diffable DataSources](https://jayeshkawli.ghost.io/ios-13-diffable-data-source-for-uitableview-and-uicollectionview/)
 
 [NSPredicate Cheat sheet](https://nspredicate.xyz/)
+
+[Vapor](https://vapor.codes)
+[Kitura](https://www.kitura.io/)

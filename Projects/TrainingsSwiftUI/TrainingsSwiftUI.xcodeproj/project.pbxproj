@@ -27,6 +27,7 @@
 		337577B52387E678005E44FE /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E6DB023844C5800AC3385 /* Training.swift */; };
 		337577B62387E678005E44FE /* TrainingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E6DB123844C5800AC3385 /* TrainingManager.swift */; };
 		337577BC2387EB4D005E44FE /* TrainingDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337577982387D71B005E44FE /* TrainingDetailsView.swift */; };
+		33757804238846A3005E44FE /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33757803238846A3005E44FE /* SwiftUIView.swift */; };
 		33975BAA2386A0E9008740CA /* TrainingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33975BA92386A0E9008740CA /* TrainingListView.swift */; };
 		33975BAC2386AA70008740CA /* TrainingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33975BAB2386AA70008740CA /* TrainingCellView.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		337577AD2387E65C005E44FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		337577AF2387E65C005E44FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		337577B02387E65C005E44FE /* TrainingsMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrainingsMac.entitlements; sourceTree = "<group>"; };
+		33757803238846A3005E44FE /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		33975BA92386A0E9008740CA /* TrainingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingListView.swift; sourceTree = "<group>"; };
 		33975BAB2386AA70008740CA /* TrainingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +108,7 @@
 				3375779A2387DF78005E44FE /* TabBarView.swift */,
 				337577982387D71B005E44FE /* TrainingDetailsView.swift */,
 				33975BAB2386AA70008740CA /* TrainingCellView.swift */,
+				33757803238846A3005E44FE /* SwiftUIView.swift */,
 				330E6DA023844B8F00AC3385 /* Assets.xcassets */,
 				330E6DA523844B8F00AC3385 /* LaunchScreen.storyboard */,
 				330E6DA823844B8F00AC3385 /* Info.plist */,
@@ -258,6 +261,7 @@
 			files = (
 				33975BAC2386AA70008740CA /* TrainingCellView.swift in Sources */,
 				33975BAA2386A0E9008740CA /* TrainingListView.swift in Sources */,
+				33757804238846A3005E44FE /* SwiftUIView.swift in Sources */,
 				330E6D9B23844B8D00AC3385 /* AppDelegate.swift in Sources */,
 				330E6DB223844C5800AC3385 /* Trainer.swift in Sources */,
 				330E6D9D23844B8D00AC3385 /* SceneDelegate.swift in Sources */,
