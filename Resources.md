@@ -13,3 +13,6 @@
 
 [Vapor](https://vapor.codes)
 [Kitura](https://www.kitura.io/)
+
+[SwiftPM](https://swiftpm.co/)
+
